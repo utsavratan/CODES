@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internship Certificate - ThryLos (Kavya Enterprises)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0d; --card:#0f1113; --muted:#9aa3ad; --accent:#ffb84d;
+      --paper-w:1050px; --paper-h:750px;
+      --gutter:36px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:radial-gradient(1200px 600px at 10% 10%, rgba(255,184,77,0.04), transparent), linear-gradient(180deg,#060607 0%, #0b0b0d 100%);font-family:Inter,system-ui,Arial;color:#e9eef2}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+
+    .card{
+      width:var(--paper-w); max-width:96%; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04);
+      padding:var(--gutter); border-radius:18px; box-shadow:0 10px 40px rgba(2,6,23,0.7);
+      position:relative; overflow:hidden;
+    }
+
+    /* subtle texture lines */
+    .card:before{content:"";position:absolute;inset:0;background-image:linear-gradient(transparent 50%, rgba(255,255,255,0.007) 50%);background-size:100% 6px;pointer-events:none}
+
+    header{display:flex;align-items:center;gap:20px}
+    .logo{width:20px;height:80px;flex:0 0 90px;border-radius:12px;padding:1px;background:linear-gradient(180deg, rgba(255,184,77,0.12), rgba(255,184,77,0.05));display:flex;align-items:center;justify-content:center}
+    .logo img{max-width:100%;max-height:100%;display:block}
+
+    .title-block{flex:1}
+    .company{font-weight:700;letter-spacing:0.6px;font-size:18px}
+    .subtitle{color:var(--muted);font-size:13px;margin-top:4px}
+
+    h1{font-family:'Playfair Display', serif;font-weight:700;font-size:44px;margin:28px 0 6px;color:#fff}
+    .recipient{font-size:28px;font-weight:700;margin:6px 0;color:var(--accent)}
+
+    .meta{display:flex;justify-content:space-between;align-items:flex-start;margin-top:18px;gap:20px}
+    .meta .left{max-width:70%}
+    .meta p{margin:6px 0;color:var(--muted)}
+
+    .bullets{margin-top:12px;padding-left:18px}
+    .bullets li{margin:8px 0}
+
+    .footer{display:flex;justify-content:space-between;align-items:center;margin-top:36px;border-top:1px dashed rgba(255,255,255,0.03);padding-top:18px}
+    .sign{display:flex;flex-direction:column;align-items:flex-start}
+    .sign .name{font-weight:700}
+    .small{font-size:12px;color:var(--muted)}
+
+    .cert-id{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:10px;font-size:13px;color:var(--muted)}
+
+    .actions{position:absolute;right:var(--gutter);top:var(--gutter);display:flex;gap:10px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:#fff;cursor:pointer;font-size:13px}
+    .btn.primary{background:linear-gradient(90deg,var(--accent), #ff9b3c);border:0;color:#0a0a0a}
+
+    /* print styles */
+    @media print{
+      body{background:white;color:#111}
+      .card{box-shadow:none;border-radius:0;border:0;width:100%;max-width:100%;padding:40px}
+      .actions{display:none}
+    }
+
+    /* responsive */
+    @media (max-width:720px){
+      h1{font-size:32px}
+      .recipient{font-size:22px}
+      .meta{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" id="certificate">
+
+      <header>
+        <div class="logo">
+          <!-- User logo: replace src if needed -->
+          <img id="logoImg" src="https://github.com/user-attachments/assets/c9940f2b-a3e9-4bd8-9b69-827e1cab7150" alt="Kavya Enterprises Logo" onerror="this.style.display='none'" />
+        </div>
+        <div class="title-block">
+          <div class="company">ThryLos Esports</div>
+          <div class="subtitle">A misterutsav Product | KAVYA ENTERPRISES | GST: <span id="gst">10DBRPK2022P1ZL</span></div>
+        </div>
+      </header>
+
+      <main>
+        <h1>INTERNSHIP CERTIFICATE</h1>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+          <div>
+            <div class="recipient" id="internName">Mrinal Prakash</div>
+            <div class="small" id="role">Role: Full Stack Developer , Social Media Engagement and Esports Moderator</div>
+          </div>
+          <div class="cert-id">Certificate ID: <strong id="certId">[AUTO]</strong></div>
+        </div>
+
+        <div class="meta">
+          <div class="left">
+            <p>This is to certify that <strong id="inlineName">Mrinal Prakash</strong> has successfully completed an internship with ThryLos Esports Powered by <strong>Kavya Enterprises</strong> from <strong id="startDate">1st August 2025</strong> to <strong id="endDate">1st October 2025</strong>.</p>
+
+            <p>During this period, <span id="heShe">He</span> worked as <strong id="roleInline">Full Stack Developer , Social Media Engagement and Esports Moderator</strong> and contributed to the following:</p>
+            <ul class="bullets" id="tasks">
+              <li>Event Coordination & eSports Management</li>
+            <li>Digital Communication & Community Engagement</li>
+            <li>Creative Branding & Social Media Promotions</li>
+            <li>Team Collaboration & Remote Work Discipline</li>
+            </ul>
+
+            <p class="small">This certificate is issued by Thrylos Esports Powered by KAVYA ENTERPRISES and is valid for academic and professional references. For verification, contact support@thrylos.in or visit thrylos.in (replace with real contact).</p>
+          </div>
+
+          <div class="right" style="min-width:220px;display:flex;flex-direction:column;align-items:flex-end;gap:12px">
+            <div style="text-align:right">
+              <div class="small">Authorized Signatory</div>
+              <div style="height:62px;margin-top:8px;border-bottom:2px solid rgba(255,184,77,0.14);width:200px"></div>
+              <div class="name" style="margin-top:8px">[Name & Designation]</div>
+              <div class="small">Kavya Enterprises</div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+      <div class="footer">
+        <div class="small">ThryLos – A misterutsav Product | Powered by Kavya Enterprises</div>
+        <div class="small">Issued on <span id="issueDate">[Issue Date]</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Utility to generate a short alphanumeric certificate id
+    function generateCertId(){
+      const now = Date.now().toString(36).toUpperCase();
+      const rand = Math.random().toString(36).substring(2,7).toUpperCase();
+      return `KAV-${now}-${rand}`;
+    }
+
+    // Fill fields from URL params if provided, else keep placeholders
+    function fillFromParams(){
+      const params = new URLSearchParams(window.location.search);
+      const fields = ['internName','role','startDate','endDate','gst'];
+      fields.forEach(f=>{
+        if(params.get(f)){
+          const el = document.getElementById(f);
+          if(el) el.textContent = params.get(f);
+        }
+      });
+
+      // tasks can be provided as tasks=Task1|Task2|Task3
+      if(params.get('tasks')){
+        const list = params.get('tasks').split('|');
+        const ul = document.getElementById('tasks'); ul.innerHTML='';
+        list.forEach(t=>{ const li=document.createElement('li'); li.textContent=t; ul.appendChild(li); });
+      }
+
+      // intern name specific areas
+      if(params.get('internName')){
+        document.getElementById('inlineName').textContent = params.get('internName');
+        document.getElementById('internName').textContent = params.get('internName');
+      }
+      if(params.get('role')){
+        document.getElementById('roleInline').textContent = params.get('role');
+        document.getElementById('role').textContent = 'Role: ' + params.get('role');
+      }
+
+      // dates
+      if(params.get('startDate')) document.getElementById('startDate').textContent = params.get('startDate');
+      if(params.get('endDate')) document.getElementById('endDate').textContent = params.get('endDate');
+
+      // issue date default to today
+      const today = new Date();
+      document.getElementById('issueDate').textContent = params.get('issueDate') || today.toLocaleDateString();
+
+      // generate cert id
+      document.getElementById('certId').textContent = generateCertId();
+
+    }
+
+    function printCertificate(){
+      window.print();
+    }
+
+    function openTemplate(){
+      // opens a simple editor in a new tab where fields can be edited live
+      const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Edit Certificate</title></head><body style="font-family:Arial;margin:20px;">`+
+      `<h2>Edit fields and save the HTML file</h2>`+
+      `<form id="frm">`+
+      `<label>Intern Name:<br><input name="internName" value="`+document.getElementById('internName').textContent+`" style="width:420px"></label><br><br>`+
+      `<label>Role:<br><input name="role" value="`+document.getElementById('roleInline').textContent+`" style="width:420px"></label><br><br>`+
+      `<label>Start Date:<br><input name="startDate" value="`+document.getElementById('startDate').textContent+`" style="width:200px"></label>`+
+      ` <label>End Date:<br><input name="endDate" value="`+document.getElementById('endDate').textContent+`" style="width:200px"></label><br><br>`+
+      `<label>Tasks (separate with | ):<br><input name="tasks" value="`+Array.from(document.querySelectorAll('#tasks li')).map(x=>x.textContent).join('|')+`" style="width:420px"></label><br><br>`+
+      `<button type="button" onclick="applyAndClose()">Apply & Close<\/button>`+
+      `</form>`+
+      `<script>function applyAndClose(){const data=new FormData(document.getElementById('frm'));const params=new URLSearchParams();for(const p of data.entries())params.set(p[0],p[1]);window.opener.location.search='?'+params.toString();window.close();}<\/script>`+
+      `</body></html>`;
+
+      const w = window.open();
+      w.document.write(html);
+      w.document.close();
+    }
+
+    // initialize
+    fillFromParams();
+  </script>
+</body>
+</html>
